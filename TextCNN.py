@@ -102,7 +102,6 @@ def computation_graph():
     model.add(GlobalMaxPool1D(name='Global_Max_Pooling'))
     model.add(Dense(units=hyperparam['filters'], name='Dense_'+str(hyperparam['filters'])))
     model.add(Dropout(rate=hyperparam['dropout'], name = 'Dropout_' + str(hyperparam['dropout'])))
-#     model.add(Activation(hyperparam['dense_activation'], name='Activation_'+str(hyperparam['dense_activation'])))
     model.add(Dense(units=hyperparam['dense_units'], name='Dense_'+str(hyperparam['dense_units'])))
     model.add(Dropout(rate=hyperparam['dropout'], name = 'Dropout2_' + str(hyperparam['dropout'])))
     model.add(Activation(hyperparam['dense_activation'], name='Activation2_'+str(hyperparam['dense_activation'])))
