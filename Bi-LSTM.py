@@ -95,9 +95,7 @@ def computation_graph():
     model  = Sequential()
     model.add(Embedding(hyperparam['vocab_size'], hyperparam['embedding_dim'], weights=[embedding_matrix], name='Embedding_Layer'))
     model.add(Bidirectional(LSTM(units=100)))
-#     model.add(Dense(units=hyperparam['filters'], name='Dense_'+str(hyperparam['filters'])))
     model.add(Dropout(rate=hyperparam['dropout'], name = 'Dropout_' + str(hyperparam['dropout'])))
-#     model.add(Activation(hyperparam['dense_activation'], name='Activation_'+str(hyperparam['dense_activation'])))
     model.add(Dense(units=hyperparam['n_class'], activation='sigmoid', name='Dense_'+str(hyperparam['n_class'])+'_Sigmoid'))
     return model
 
