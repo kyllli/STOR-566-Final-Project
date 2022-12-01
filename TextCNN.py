@@ -1,3 +1,4 @@
+# Reference: https://github.com/xitizzz/Text-CNN-Toxic-Comment-Classification/blob/master/CNN_Advance_2_FC.ipynb
 import numpy as np
 import pandas as pd
 
